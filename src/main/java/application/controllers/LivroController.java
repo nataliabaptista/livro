@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import application.repositories.LivroRepository;
 import org.springframework.ui.Model;
+
 @Controller
 @RequestMapping("/livro")
 public class LivroController {
@@ -12,12 +13,7 @@ public class LivroController {
     @RequestMapping("/list")
     public String list(Model model){
         model.addAttribute("livros", livrosRepo.findAll());
-        return "list.jsp";
+        return "livro/list.jsp";
         
     }
-
-
- 
-
-    
 }
