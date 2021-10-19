@@ -13,7 +13,10 @@ public class LivroController {
     @RequestMapping("/list")
     public String list(Model model){
         model.addAttribute("livros", livrosRepo.findAll());
-        return "livro/list.jsp";
+        return "list.jsp";
         
     }
+    public String listar(){
+        return "livro/list.jsp";
+      }
 }
