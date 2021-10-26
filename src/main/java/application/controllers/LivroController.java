@@ -1,6 +1,8 @@
 package application.controllers;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import application.models.Livro;
 import application.repositories.LivroRepository;
@@ -35,5 +37,15 @@ public class LivroController {
           livrosRepo.save(livro);
           return "redirect:/livro/list";
       }
+
+      @RequestMapping("/delete/{id}")
+      public String formDelete(Model model, @PathVariable int id){
+        Optional<Livro> livro=livrosRepo.findById(id);
+        if (!livro.isPresent())
+            return "redirect:/livro/list";
+        model.addAttribute("livro", livro.get());
+          return "/livro/delete.jsp";
+      }
+
 }
 
