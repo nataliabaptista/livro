@@ -1,4 +1,4 @@
-package application.controllers; // Importanto pacote Responsável por fazer a intermediação entre camadas (View e Model).
+package application.controllers; // Importanto pacote responsável por fazer a intermediação entre camadas (View e Model).
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,13 +10,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@Controller
-@RequestMapping("/livro") // Mapeamento
-public class LivroController {
-    @Autowired
-    private LivroRepository livrosRepo;
-    @RequestMapping("/list")
-    public String list(Model model){
+@Controller //Anotação dizendo que a próxima linha possuirá um controller.
+@RequestMapping("/livro") // Anotação dizendo que a próxima linha é referente ao mapeamento da pasta livro (dentro do webapp). 
+public class LivroController { //Criando classe livroController.
+    @Autowired // Anotação dizendo que a próxima linha fornece controle sobre onde e como a ligação entre as classes será realizada.
+    private LivroRepository livrosRepo; 
+    @RequestMapping("/list") // Anotação dizendo que a próxima linha é referente ao mapeamento do arquivo list (dentro da pasta livro). 
+    public String list(Model model){ 
         model.addAttribute("livros", livrosRepo.findAll());
         return "list.jsp";
         
