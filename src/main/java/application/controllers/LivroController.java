@@ -1,4 +1,4 @@
-package application.controllers; // Pacote Responsável por fazer a intermediação entre camadas (View e Model).
+package application.controllers; // Importanto pacote Responsável por fazer a intermediação entre camadas (View e Model).
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
