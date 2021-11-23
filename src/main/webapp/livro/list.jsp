@@ -27,7 +27,7 @@
                 </tr> <!--Fim da linha da tabela-->
             </c:forEach> <!--Fim da definição de itens da tabela livros-->
         </table> <!--Fim da tabela-->
-        <h1>Lista de livros. Natália Mendes</h1></main>
+        <h1>Lista de livros. Natália Mendes</h1></main> <!--Definindo titulo do corpo-->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script> <!--Conectando programa com bootstrap-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> <!--Conectando programa com bootstrap-->
     </main> <!--Encerrando parte principal-->
